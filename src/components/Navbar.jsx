@@ -4,8 +4,6 @@ import { useSelector } from "react-redux";
 function Navbar() {
   const { isLoggedIn, user } = useSelector((state) => state.auth);
 
-  console.log(user);
-
   return (
     <nav>
       {isLoggedIn ? (

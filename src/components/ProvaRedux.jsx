@@ -4,7 +4,6 @@ import { increment, decrement, reset } from "../stores/counter";
 function ProvaRedux() {
   // Valore dello stato
   const count = useSelector((state) => state.counter.count);
-  console.log(count);
 
   // permette di mandare azioni
   const dispatch = useDispatch();
