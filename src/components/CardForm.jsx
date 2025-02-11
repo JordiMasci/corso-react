@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { add } from "../stores/cities";
 
 function CardForm({ addCity }) {
+  const dispatch = useDispatch();
   // LOGICA PER AGGIUNGERE CARD DAL FORM DEL FIGLIO
   const [formData, setFormData] = useState({
     title: "",
@@ -33,7 +36,7 @@ function CardForm({ addCity }) {
       src: "",
       isVisited: false,
     });
-    addCity(city);
+    dispatch(add(city));
   };
 
   // -----------------------------------------------------
