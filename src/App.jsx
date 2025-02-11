@@ -6,7 +6,6 @@ import Example from "./components/Example";
 import ProvaRedux from "./components/ProvaRedux";
 import Navbar from "./components/Navbar";
 import LoginForm from "./components/LoginForm";
-import LogoutButton from "./components/LogoutButton";
 
 function App() {
   // FUNZIONE PASSATA AL FIGLIO PER AGGIUNGERE CARD DAL FORM DEL FIGLIO
@@ -67,7 +66,6 @@ function App() {
     <>
       <Navbar />
       <LoginForm />
-      <LogoutButton />
       <ProvaRedux></ProvaRedux>
       <Example />
       <CardForm addCity={addCity} />

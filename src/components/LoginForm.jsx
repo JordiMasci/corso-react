@@ -1,4 +1,5 @@
 import React from "react";
+import LogoutButton from "./LogoutButton";
 import { useDispatch } from "react-redux";
 import { login } from "../stores/authSlice";
 
@@ -11,9 +12,12 @@ function LoginForm() {
   };
 
   return (
-    <div>
-      <button onClick={handleLogin}>Login</button>
-    </div>
+    <>
+      <div>
+        <button onClick={handleLogin}>Login</button>
+      </div>
+      <LogoutButton />
+    </>
   );
 }
 
