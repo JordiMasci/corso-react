@@ -13,10 +13,10 @@ function NavbarRouting() {
         <Link to={"/example"}>Example</Link>
       </li>
       <li>
-        <Link to={"/loginLogout"}>Login - Logout</Link>
+        <Link to={"/contatore"}>Contatore</Link>
       </li>
       <li>
-        <Link to={"/contatore"}>Contatore</Link>
+        <Link to={"/loginLogout"}>Login - Logout</Link>
       </li>
     </ul>
   );

@@ -38,8 +38,11 @@ const citiesSlice = createSlice({
     add: (state, action) => {
       state.value.push(action.payload);
     },
+    removeCity: (state, action) => {
+      state.value = state.value.filter((city) => city.id !== action.payload);
+    },
   },
 });
 
-export const { add } = citiesSlice.actions;
+export const { add, removeCity } = citiesSlice.actions;
 export default citiesSlice.reducer;
