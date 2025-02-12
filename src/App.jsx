@@ -6,6 +6,7 @@ import ProvaRedux from "./components/ProvaRedux";
 import Navbar from "./components/Navbar";
 import LoginForm from "./components/LoginForm";
 import CardAPI from "./components/CardAPI";
+import NavbarRouting from "./components/NavbarRouting";
 import { useSelector } from "react-redux";
 
 function App() {
@@ -14,12 +15,7 @@ function App() {
   // UseContext
   return (
     <>
-      <Navbar />
-      <LoginForm />
-      <ProvaRedux></ProvaRedux>
-      <Example />
-      <CardForm />
-
+      <NavbarRouting />
       <div className="grid grid-cols-4 gap-[10px]">
         {cities.map((city) => (
           <Card
@@ -31,7 +27,6 @@ function App() {
           />
         ))}
       </div>
-      <CardAPI></CardAPI>
     </>
   );
 }
