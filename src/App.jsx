@@ -7,7 +7,7 @@ import { removeCity } from "./stores/cities";
 
 function App() {
   const cities = useSelector((state) => state.cities.value);
-  console.log(cities);
+  // console.log(cities);
   const dispatch = useDispatch();
 
   const handleRemoveCity = (id) => {

@@ -1,17 +1,24 @@
 import { useState, useEffect } from "react";
 import NavbarRouting from "./NavbarRouting";
+import { useSelector, useDispatch } from "react-redux";
+import { setCitiesAPI, removeCityAPI } from "../stores/citiesAPI";
 
 function CardAPI() {
-  // USEeffect;
-  const [data, setData] = useState([]);
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.citiesAPI.value);
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => res.json())
       .then((data) => {
-        setData(data);
+        dispatch(setCitiesAPI(data));
       });
   }, []);
+
+  const handleRemove = (id) => {
+    dispatch(removeCityAPI(id));
+  };
+  console.log(data);
 
   return (
     <>
@@ -22,6 +29,12 @@ function CardAPI() {
             <p className="text-red-500">userid: {item.userId}</p>
             <p className="text-white">title: {item.title}</p>
             <p className="text-black">body: {item.body}</p>
+            <p
+              className="flex w-full  justify-center items-end cursor-pointer"
+              onClick={() => handleRemove(item.id)}
+            >
+              ELIMINA
+            </p>
           </div>
         ))}
       </div>
