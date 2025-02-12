@@ -4,10 +4,10 @@ function NavbarRouting() {
   return (
     <ul className="w-full flex justify-around pb-[20px]">
       <li>
-        <Link to={""}>Pagina 1</Link>
+        <Link to={"/"}>Home</Link>
       </li>
       <li>
-        <Link to={""}>Pagina 2</Link>
+        <Link to={"/cardAPI"}>Card API</Link>
       </li>
       <li>
         <Link to={""}>Pagina 3</Link>

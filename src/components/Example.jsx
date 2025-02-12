@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer } from "react";
+import { useState, useReducer } from "react";
 
 function formReducer(state, action) {
   switch (action.type) {
@@ -12,20 +12,10 @@ function formReducer(state, action) {
 }
 
 function Example() {
-  const [data, setData] = useState(null);
-
-  //   useEffect(() => {
-  //     // document.title = "conteggio: " + count;
-  //     fetch("https://jsonplaceholder.typicode.com/posts")
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         setData(data);
-  //         // console.log(data);
-  //       });
-  //   }, []);
-
   const initialState = { name: "", email: "" };
   const [formState, dispatch] = useReducer(formReducer, initialState);
+
+  const [formData, setFormData] = useState({ name: "", email: "" });
 
   const handleFieldChange = (field, value) => {
     dispatch({ type: "CHANGE_FIELD", field, value });
@@ -34,10 +24,12 @@ function Example() {
   const resetForm = (e) => {
     e.preventDefault();
     dispatch({ type: "RESET_FORM" });
+    setFormData(null);
   };
 
   const sendForm = (e) => {
     e.preventDefault();
+    setFormData({ name: formState.name, email: formState.email });
     console.log(formState);
   };
 
@@ -69,6 +61,11 @@ function Example() {
         <button onClick={resetForm}>Reset</button>
         <button onClick={sendForm}>Invia</button>
       </form>
+
+      <div>
+        <p>Name: {formData && formData.name}</p>
+        <p>Email: {formData && formData.email}</p>
+      </div>
     </>
   );
 }

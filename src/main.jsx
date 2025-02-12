@@ -5,11 +5,21 @@ import App from "./App.jsx";
 import { store } from "./stores/store.js";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Example from "./components/Example.jsx";
+import CardAPI from "./components/CardAPI.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+  },
+  {
+    path: "/cardAPI",
+    element: <CardAPI></CardAPI>,
+  },
+  {
+    path: "/example",
+    element: <Example></Example>,
   },
 ]);
 

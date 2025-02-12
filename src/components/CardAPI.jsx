@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import NavbarRouting from "./NavbarRouting";
 
 function CardAPI() {
   // USEeffect;
@@ -14,6 +15,7 @@ function CardAPI() {
 
   return (
     <>
+      <NavbarRouting></NavbarRouting>
       <div className="grid grid-cols-4 gap-[10px]">
         {data.map((item) => (
           <div key={item.id} className="bg-slate-400 rounded-lg p-3">
