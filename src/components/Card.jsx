@@ -1,16 +1,14 @@
-import { useDispatch } from "react-redux";
-
-function Card({ title, src, description, isVisited }) {
+function Card({ id, title, src, description, isVisited, handleRemoveCity }) {
   const visitata = isVisited && <span>Visistata</span>;
   const nonVisitata = !isVisited && <span>non Visistata</span>;
 
-  const dispatch = useDispatch();
   return (
     <>
       <div className="rounded-md bg-zinc-950 relative">
         <span
           className="absolute text-indigo-200 cursor-pointer"
           style={{ top: "2%", right: "5%" }}
+          onClick={() => handleRemoveCity(id)}
         >
           X
         </span>
