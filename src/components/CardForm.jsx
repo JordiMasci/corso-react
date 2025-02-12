@@ -41,50 +41,57 @@ function CardForm() {
 
   // -----------------------------------------------------
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col w-1/2 pb-5">
-      <div className="flex flex-col">
-        <label htmlFor="">Nome Citta </label>
-        <input
-          className=" bg-gray-500 mb-[10px]"
-          type="text"
-          name="title"
-          onChange={handleChange}
-          value={formData.title}
-        />
-      </div>
-      <div className="flex flex-col">
-        <label htmlFor="">Descrizione</label>
-        <textarea
-          className=" bg-gray-500 mb-[10px]"
-          type="text"
-          name="description"
-          onChange={handleChange}
-          value={formData.description}
-        />
-      </div>
-      <div className="flex flex-col">
-        <label htmlFor="">Immagine</label>
-        <input
-          className=" bg-gray-500 mb-[10px]"
-          type="text"
-          name="src"
-          onChange={handleChange}
-          value={formData.src}
-        />
-      </div>
-      <div className="flex flex-col">
-        <label htmlFor="">Visitata?</label>
-        <input
-          className=" bg-gray-500 mb-[10px]"
-          type="checkbox"
-          name="isVisited"
-          onChange={handleChange}
-          checked={formData.isVisited}
-        />
-      </div>
+    <>
+      <div className="flex w-full justify-center">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col justify-center w-1/2 pb-5"
+        >
+          <div className="flex flex-col">
+            <label htmlFor="">Nome Citta </label>
+            <input
+              className=" bg-gray-500 mb-[10px]"
+              type="text"
+              name="title"
+              onChange={handleChange}
+              value={formData.title}
+            />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="">Descrizione</label>
+            <textarea
+              className=" bg-gray-500 mb-[10px]"
+              type="text"
+              name="description"
+              onChange={handleChange}
+              value={formData.description}
+            />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="">Immagine</label>
+            <input
+              className=" bg-gray-500 mb-[10px]"
+              type="text"
+              name="src"
+              onChange={handleChange}
+              value={formData.src}
+            />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="">Visitata?</label>
+            <input
+              className=" bg-gray-500 mb-[10px]"
+              type="checkbox"
+              name="isVisited"
+              onChange={handleChange}
+              checked={formData.isVisited}
+            />
+          </div>
 
-      <button type="submit">Aggiungi card</button>
-    </form>
+          <button type="submit">Aggiungi card</button>
+        </form>
+      </div>
+    </>
   );
 }
 
