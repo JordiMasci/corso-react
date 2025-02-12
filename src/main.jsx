@@ -7,6 +7,8 @@ import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Example from "./components/Example.jsx";
 import CardAPI from "./components/CardAPI.jsx";
+import LoginForm from "./components/LoginForm.jsx";
+import ProvaRedux from "./components/ProvaRedux.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
   {
     path: "/example",
     element: <Example></Example>,
+  },
+  {
+    path: "/loginLogout",
+    element: <LoginForm></LoginForm>,
+  },
+  {
+    path: "/contatore",
+    element: <ProvaRedux></ProvaRedux>,
   },
 ]);
 

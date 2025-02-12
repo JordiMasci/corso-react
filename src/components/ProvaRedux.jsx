@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement, reset } from "../stores/counter";
+import NavbarRouting from "./NavbarRouting";
 
 function ProvaRedux() {
   // Valore dello stato
@@ -10,6 +11,7 @@ function ProvaRedux() {
 
   return (
     <>
+      <NavbarRouting></NavbarRouting>
       <div>
         <h1>Contatore: {count}</h1>
         <button onClick={() => dispatch(increment())}>+</button>

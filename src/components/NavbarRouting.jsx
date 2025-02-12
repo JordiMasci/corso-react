@@ -10,13 +10,13 @@ function NavbarRouting() {
         <Link to={"/cardAPI"}>Card API</Link>
       </li>
       <li>
-        <Link to={""}>Pagina 3</Link>
+        <Link to={"/example"}>Example</Link>
       </li>
       <li>
-        <Link to={""}>Pagina 4</Link>
+        <Link to={"/loginLogout"}>Login - Logout</Link>
       </li>
       <li>
-        <Link to={""}>Pagina 5</Link>
+        <Link to={"/contatore"}>Contatore</Link>
       </li>
     </ul>
   );
