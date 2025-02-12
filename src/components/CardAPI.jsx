@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import NavbarRouting from "./NavbarRouting";
 import { useSelector, useDispatch } from "react-redux";
 import { setCitiesAPI, removeCityAPI } from "../stores/citiesAPI";
