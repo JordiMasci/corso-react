@@ -10,6 +10,7 @@ import CardAPI from "./components/CardAPI.jsx";
 import LoginForm from "./components/LoginForm.jsx";
 import ProvaRedux from "./components/ProvaRedux.jsx";
 import Card from "./components/Card.jsx";
+import SingleCard from "./components/SingleCard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/:cardID",
-    element: <Card></Card>,
+    element: <SingleCard></SingleCard>,
   },
   {
     path: "/cardAPI",
