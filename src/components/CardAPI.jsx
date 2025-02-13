@@ -8,17 +8,18 @@ function CardAPI() {
   const data = useSelector((state) => state.citiesAPI.value);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((res) => res.json())
-      .then((data) => {
-        dispatch(setCitiesAPI(data));
-      });
+    if (data.length === 0) {
+      fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((res) => res.json())
+        .then((data) => {
+          dispatch(setCitiesAPI(data));
+        });
+    }
   }, []);
 
   const handleRemove = (id) => {
     dispatch(removeCityAPI(id));
   };
-  console.log(data);
 
   return (
     <>
