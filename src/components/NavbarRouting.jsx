@@ -18,6 +18,9 @@ function NavbarRouting() {
       <li>
         <Link to={"/loginLogout"}>Login - Logout</Link>
       </li>
+      <li>
+        <Link to={"/cardItem"}>Card Children</Link>
+      </li>
     </ul>
   );
 }

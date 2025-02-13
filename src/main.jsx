@@ -9,18 +9,27 @@ import Example from "./components/Example.jsx";
 import CardAPI from "./components/CardAPI.jsx";
 import LoginForm from "./components/LoginForm.jsx";
 import ProvaRedux from "./components/ProvaRedux.jsx";
-import Card from "./components/Card.jsx";
 import SingleCard from "./components/SingleCard.jsx";
+import CardItem from "./components/CardItem.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-    // children: [],
   },
   {
     path: "/:cardID",
     element: <SingleCard></SingleCard>,
+  },
+  {
+    path: "cardItem",
+    element: <CardItem></CardItem>,
+    children: [
+      {
+        path: ":cardID",
+        element: <SingleCard></SingleCard>,
+      },
+    ],
   },
   {
     path: "/cardAPI",

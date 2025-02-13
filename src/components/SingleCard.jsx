@@ -21,7 +21,9 @@ function SingleCard() {
         {!city.isVisited && <span>Non visitata</span>}
       </div>
       <p>{city.description}</p>
-      <img src={city.src} alt="" width="400" className="rounded-t-md" />
+      <div className="flex justify-center">
+        <img src={city.src} alt="" width="400" className="rounded-t-md" />
+      </div>
     </>
   );
 }
