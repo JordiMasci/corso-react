@@ -23,6 +23,7 @@ function App() {
         {cities.map((city) => (
           // <Link to={`/${city.id}`} key={city.id}>
           <Card
+            key={city.id}
             remove={remove}
             id={city.id}
             title={city.title}
